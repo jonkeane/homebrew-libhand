@@ -21,7 +21,8 @@ class Libhand < Formula
     cmake_args.concat(std_cmake_args)
     cmake_args << ".."
 
-    mkdir "build" do
+    mkdir "hand_cpp/build" do
+      system "cd hand_cpp/build"
       system "cmake", *cmake_args
       system "make"
       system "make install"
