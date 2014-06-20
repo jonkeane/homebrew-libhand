@@ -7,7 +7,7 @@ class Libhand < Formula
   # sha1 'e989b96eacc2c66f8cf8a19dae6cfd962a165207'
   keg_only "For testing."
   
-  head "https://github.com/jonkeane/libhand", :revision => "87605e1a426ceaf1bdd06fa6db86be426aa43236"
+  head "https://github.com/jonkeane/libhand.git", :revision => "87605e1a426ceaf1bdd06fa6db86be426aa43236"
   sha1 '5eba03bd47f58f62fd6a14eda343f86dffee99f4'
   
   depends_on 'boost'
