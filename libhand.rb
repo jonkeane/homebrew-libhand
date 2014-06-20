@@ -22,11 +22,9 @@ class Libhand < Formula
     cmake_args << ".."
 
     mkdir "build"
-    chdir "build" do
-      system "touch IAMHERE"
-      system "cmake", *cmake_args
-      system "make"
-      system "make install"
-    end
+    chdir "build"
+    system "cmake", *cmake_args
+    system "make"
+    system "make install"
   end
 end
