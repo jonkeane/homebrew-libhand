@@ -11,7 +11,8 @@ class Libhand < Formula
   #sha1 '5eba03bd47f58f62fd6a14eda343f86dffee99f4'
   
   depends_on 'boost'
-  depends_on 'ogre' => :build
+  depends_on 'cmake' => :build
+  depends_on 'ogre'
 
   def install
     ENV.m64
@@ -26,7 +27,7 @@ class Libhand < Formula
     mkdir "hand_cpp/build"
     chdir "hand_cpp/build"
     system "cmake", *cmake_args
-    # system "make"
-    # system "make install"
+    system "make"
+    system "make install"
   end
 end
