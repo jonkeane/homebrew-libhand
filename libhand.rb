@@ -25,7 +25,7 @@ class Libhand < Formula
 
     mkdir "build"
     chdir "build"
-    system "cmake", *cmake_args
+    system "cmake .."
     system "make"
     system "make install"
   end
