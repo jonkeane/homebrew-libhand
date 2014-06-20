@@ -20,6 +20,8 @@ class Libhand < Formula
     
     cmake_args.concat(std_cmake_args)
     cmake_args << ".."
+    cmake_args = ".."
+
 
     mkdir "build"
     chdir "build"
