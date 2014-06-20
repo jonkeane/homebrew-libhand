@@ -8,7 +8,8 @@ class Libhand < Formula
   keg_only "For testing."
   
   head "https://github.com/jonkeane/libhand", :revision => "87605e1a426ceaf1bdd06fa6db86be426aa43236"
-
+  sha1 '5eba03bd47f58f62fd6a14eda343f86dffee99f4'
+  
   depends_on 'boost'
   depends_on 'ogre' => :build
 
