@@ -49,14 +49,25 @@ class Ogre < Formula
     url 'https://gist.github.com/scpeters/568f5490a99aa9fc3eb7/raw/881b0f200ac218b7b976ade8f63e3792303c2a5e/ogre_find_freetype.diff'
     sha1 '0d9b58311b7a3abab0a0f230f45a5d8d1e285039'
   end if !build.head?
+  patch do
+    url 'https://gist.github.com/jonkeane/a733f404ab25b1c81b95/raw/2b7af80fc8e0e6a8b22077d7d28373f2187cf11c/fix_fwk_library.patch'
+    sha1 '09b3f74dd5fae9ba397bcfe86bbfd7110a9a7160'
+  end if !build.head?
 
   def install
     ENV.m64
 
     cmake_args = [
       "-DCMAKE_OSX_ARCHITECTURES='x86_64'",
-      "-DOGRE_BUILD_PLUGIN_CG=OFF"
+      "-DOGRE_BUILD_PLUGIN_CG=OFF",
+#      "-DOGRE_COPY_DEPENDENICES=FALSE",
+#      "-DOGRE_INSTALL_DEPENDENCIES=FALSE",
+      "-DOGRE_BUILD_TOOLS=TRUE",
+      "-DOGRE_BUILD_SAMPLES=FALSE",
+      "-DOGRE_INSTALL_TOOLS=TRUE",
+      "-DOGRE_STATIC=TRUE" 
     ]
+    
     cmake_args.concat(std_cmake_args)
     cmake_args << ".."
 
