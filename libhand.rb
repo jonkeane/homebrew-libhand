@@ -1,6 +1,6 @@
 require 'formula'
 
-class libhand < Formula
+class Libhand < Formula
   homepage 'http://www.libhand.org/'
   # url 'https://sourceforge.net/projects/ogre/files/ogre/1.7/ogre_src_v1-7-4.tar.bz2'
   version '0.9'
