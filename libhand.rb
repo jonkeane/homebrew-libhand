@@ -23,6 +23,7 @@ class Libhand < Formula
 
     mkdir "build"
     chdir "build" do
+      system "touch IAMHERE"
       system "cmake", *cmake_args
       system "make"
       system "make install"
